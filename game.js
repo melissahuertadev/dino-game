@@ -13,6 +13,7 @@ const startScreenElem = document.querySelector("[data-start-screen]");
 setWorldScale();
 window.addEventListener("resize", setWorldScale);
 document.addEventListener("keydown", handleStart, { once: true });
+document.addEventListener("touchstart", handleStart, { once: true });
 
 /*
     Update Loop
@@ -87,6 +88,7 @@ function handleLose(){
     setDinoLose();
     setTimeout(() => {
         document.addEventListener("keydown", handleStart, { once: true });
+        document.addEventListener("touchstart", handleStart, { once: true });
         startScreenElem.classList.remove("hide");
     }, 100);
 }
